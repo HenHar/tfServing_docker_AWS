@@ -1,11 +1,11 @@
 # Deploy Tensorflow model with TfServing in a docker container on AWS instance
 
 ## Train model and save in saved model format
-tf.saved_model.save([model], [save_path]) or model.export(save_path)
-This examples uses EfficientNet model with imagenet weights, created in jupyter notebook "create_model.ipynb"
+* save with `tf.saved_model.save([model], [save_path])` or `model.export(save_path])`
+* This examples uses EfficientNet model with imagenet weights, created in jupyter notebook "create_model.ipynb"
 
-### directory should look like this with the top folder name as the model name
-model_name=eff_imagenet
+### Directory should look like this with the top folder name as the model name
+model_name=eff_imagenet\
 ![alt text](https://github.com/HenHar/tfServing-inference-flutter/blob/main/images/required_structure.png?raw=true)
 
 ## Deploy with TF Serving docker locally for testing
@@ -22,8 +22,8 @@ python3 test_inference.py
 
 ## Deploy on AWS
 ### Create new EC2 instance 
-Save your "*.pem" file locally
-Look for your instance's public ip address (my test instance: 3.120.130.54)
+* Save your "*.pem" file locally
+* Look for your instance's public ip address (my test instance: 3.120.130.54)
 
 ### Add inboud rule to security group: allowing inbound on port 8501
 ![alt text](https://github.com/HenHar/tfServing-inference-flutter/blob/main/images/security_group.png?raw=true)
@@ -47,7 +47,7 @@ sudo docker build -t eff_imagenet -f Dockerfile .
 ### run docker container
 sudo docker run -d -p 8501:8501 eff_imagenet
 
-### check for model avalibilty with public ipin browser
+### check for model avalibilty with public ip in browser
 http://3.120.130.54:8501/v1/models/eff_imagenet
 
 ### run inference with test_inference.py script with following url
