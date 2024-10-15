@@ -86,6 +86,7 @@ http://3.120.130.54:8501/v1/models/eff_imagenet:predict
 # Add https support with caddy and nip.io
 * caddy also provides a reverse_proxy so that only port :80 and :443 of the EC2 instance needs to be open to the internet
 * you have to register a domain or you can use nip.io for https support
+* adjust security group and delete inbound rule for port :8501
 
 ### install caddy
 ```
@@ -110,7 +111,6 @@ start or restart caddy service
 sudo systemctl start caddy
 sudo systemctl restart caddy
 ```
-
 
 
 
