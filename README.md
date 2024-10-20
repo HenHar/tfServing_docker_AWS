@@ -32,7 +32,7 @@ python3 test_inference.py
 * Look for your instance's public ip address (my test instance: 3.120.130.54)
 
 ### Add temporary inboud rule to security group: allowing inbound on port 8501
-![alt text](https://github.com/HenHar/tfServing-inference-flutter/blob/main/images/security_group.png?raw=true)
+![alt text](https://github.com/HenHar/tfServing_docker_AWS/blob/main/images/security_group.png)
 
 ### Connect to to AWS instance:
 ```
