@@ -6,7 +6,7 @@
 
 ### Directory should look like this with the top folder name as the model name
 model_name=eff_imagenet\
-![alt text](https://github.com/HenHar/tfServing-inference-flutter/blob/main/images/required_structure.png?raw=true)
+![alt text](https://github.com/HenHar/tfServing_docker_AWS/blob/main/images/required_structure.png)
 
 ## Deploy with TF Serving docker locally for testing
 ```
